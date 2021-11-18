@@ -158,7 +158,7 @@ Try {
 
 		## Installing Mathcad Prime
         Show-InstallationProgress "Installing Mathcad Prime 7.0. This may take some time. Please wait..."
-        Execute-Process -Path "$dirFiles\setup.exe" -Parameters "-xml mathcad.p.xml" -WindowStyle Hidden
+        Execute-Process -Path "$dirFiles\setup.exe" -Parameters "-xml $dirFiles\mathcad.p.xml" -WindowStyle Hidden
 
 		##*===============================================
 		##* POST-INSTALLATION
@@ -175,13 +175,13 @@ Try {
 		##*===============================================
 		##* PRE-UNINSTALLATION
 		##*===============================================
-		[string]$installPhase = 'Pre-Uninstallation'
+		#[string]$installPhase = 'Pre-Uninstallation'
 
 		## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-		Show-InstallationWelcome -CloseApps 'iexplore' -CloseAppsCountdown 60
+		#Show-InstallationWelcome -CloseApps 'iexplore' -CloseAppsCountdown 60
 
 		## Show Progress Message (with the default message)
-		Show-InstallationProgress
+		#Show-InstallationProgress
 
 		## <Perform Pre-Uninstallation tasks here>
         $AppList = Get-InstalledApplication -Name 'MathcadPrime'
