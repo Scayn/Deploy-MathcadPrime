@@ -127,7 +127,7 @@ Try {
 		Show-InstallationProgress
 
 		## Uninstall Mathcad Prime
-        $AppList = Get-InstalledApplication -Name 'Mathcad Prime'
+        $AppList = Get-InstalledApplication -Name "*Mathcad Prime*"
         
         ForEach ($App in $AppList)
         {
